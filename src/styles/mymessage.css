@@ -1,0 +1,24 @@
+.mymessage{
+    width: 75%;
+    height: 100px;
+    padding-left: 25%; 
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.mymessage span{
+    font-size: 20px;
+    margin: 0;
+    float: right;
+}
+
+.mymessage label{
+    float: right;
+    font-size: 15px;
+}
+
+.mymessage button{
+    float: right;
+}
+
+

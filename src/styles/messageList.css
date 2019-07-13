@@ -1,0 +1,11 @@
+.messageList{
+    width: 75%;
+    margin: 0 auto;
+    height: 600px;
+    border: 3px solid red;
+    overflow-y: scroll;
+}
+
+.titleDate{
+    text-align: center;
+}
