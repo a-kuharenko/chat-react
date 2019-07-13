@@ -17,8 +17,8 @@ class MessageList extends React.Component{
         return (
             <div className = 'messageList'>
                 {this.props.messages.map((message, index) => {
-                    const miliseconds = Date.parse(message.created_at);
-                    const dateOfMessage = (new Date(miliseconds)).toDateString();
+                    const milliseconds = Date.parse(message.created_at);
+                    const dateOfMessage = (new Date(milliseconds)).toDateString();
                     return message.user !== this.props.user ?
                       (<div key = { index }>
                         {dateLine(dateOfMessage, this.date)}

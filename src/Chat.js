@@ -15,7 +15,7 @@ class Chat extends React.Component{
         this.setState({
           chatName: 'My Chat',
           participants: 5,
-          lastMessageDate: messages[this.length-1].created_at,
+          lastMessageDate: messages[this.length - 1].created_at,
           messages,
           user: 'Sasha',
         });
@@ -26,7 +26,7 @@ class Chat extends React.Component{
     this.setState(state => {
       const messages = [...state.messages, 
         {
-        'id': this.state.messages[this.length-1].id + 1,
+        'id': this.state.messages[this.length - 1].id + 1,
         'user': this.state.user,
         'avatar': 'https://i.pravatar.cc/300?img=18',
         'created_at': toFormatDate(new Date()),
