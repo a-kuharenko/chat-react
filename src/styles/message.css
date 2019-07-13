@@ -1,0 +1,27 @@
+.message{
+    width: 75%;
+    height: 100px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    padding-right: 25%;
+}
+
+.avatar{
+    float: left;
+    width: 100px;
+    vertical-align: middle;
+}
+
+.message span{
+    font-size: 20px;
+    margin: 0;
+}
+
+.message label{
+    font-size: 15px;
+}
+
+.like{
+    height: 15px;
+    width: 15px;
+}
