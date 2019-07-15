@@ -1,4 +1,14 @@
+label{
+  margin: 0;
+  box-sizing: content-box;
+}
 
+*{
+  box-sizing: content-box;
+}
+* button{
+  box-sizing: border-box;
+}
 #loading {
   position: absolute;
   top: 50%;

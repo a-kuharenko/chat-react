@@ -8,9 +8,7 @@ class MyMessage extends React.Component{
     }
 
     onEdit = () => {
-        const message = prompt('Edit');
-        if(message)
-            this.props.onEdit(message, this.props.index);
+        this.props.onEdit(this.props.index);
     }
     render(){
         return (
@@ -20,7 +18,7 @@ class MyMessage extends React.Component{
                 <br/>
                 <label>{ this.props.message.created_at }</label>
                 <br/>
-                <button onClick = { this.onEdit }>Edit</button>
+                <button className = 'edit' onClick = { this.onEdit }>Edit</button>
                 <button onClick = { this.onDeleteClick }>Delete</button>
             </div>
         )

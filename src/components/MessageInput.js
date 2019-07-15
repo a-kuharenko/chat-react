@@ -1,6 +1,7 @@
 import React from 'react';
 import '../styles/messageInput.css'
-
+import { connect } from 'react-redux';
+import * as actions from '../actions';
 class MessageInput extends React.Component{
     constructor(props){
         super(props);
@@ -18,7 +19,7 @@ class MessageInput extends React.Component{
     }
 
     onClick(){
-        this.props.onSend(this.state.message);
+        this.props.sendMessage(this.state.message);
     }
 
     onBlur(e){
@@ -38,4 +39,15 @@ class MessageInput extends React.Component{
     }
 }
 
-export default MessageInput;
+const mapStateToProps = state => {
+    return {
+        chat: state.chatReducer,
+    }
+  }
+  
+  const mapDispatchToProps = {
+    ...actions,
+  }
+  
+  export default connect(mapStateToProps, mapDispatchToProps)(MessageInput);
+  

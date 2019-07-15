@@ -1,10 +1,11 @@
 import React from 'react';
 import '../styles/header.css';
-
+import { connect } from 'react-redux';
+import * as actions from '../actions';
 class Header extends React.Component{
     
     render() {
-        const {chatName, messages, participants, lastMessageDate} = this.props.data;
+        const {chatName, messages, participants, lastMessageDate} = this.props.chat;
         return (
             <div className='header'>
                 <label>{ chatName }</label>
@@ -16,4 +17,15 @@ class Header extends React.Component{
     }
 }
 
-export default Header;
+const mapStateToProps = state => {
+    return {
+        chat: state.chatReducer,
+    }
+  }
+  
+  const mapDispatchToProps = {
+    ...actions,
+  }
+  
+  export default connect(mapStateToProps, mapDispatchToProps)(Header);
+  

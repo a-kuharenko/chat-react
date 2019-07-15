@@ -18,7 +18,7 @@ class Message extends React.Component{
         else{
             likes = this.state.likes + 1;
         }
-        this.props.onLike(likes, this.props.index);
+        this.props.onLike(this.props.index, likes);
         this.setState({
             liked: !this.state.liked,
             likes,

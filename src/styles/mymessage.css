@@ -21,4 +21,10 @@
     float: right;
 }
 
+.edit{
+    display: none;
+}
 
+.mymessage:not(:nth-child(3)):hover .edit{
+    display: inline;
+}
