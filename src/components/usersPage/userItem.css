@@ -1,0 +1,18 @@
+.userItem{
+    margin: 0 auto;
+    margin-bottom: 20px;
+    width: 500px;
+    text-align: center;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    border: 3px solid black;
+}
+
+.userItem span{
+    padding: 10px;
+    background: red;
+}
+
+.userItem button{
+    margin-left: 10px;
+}

@@ -1,8 +1,11 @@
 import React from 'react';
-import Header from './components/Header';
-import MessageList from './components/MessageList';
-import MessageInput from './components/MessageInput';
-import ModalPage from './components/ModalPage';
+import { Switch, Route } from 'react-router-dom'
+import EditMessage from './components/editMessage';
+import Login from './components/loginPage/index'
+import ChatPage from './components/chatPage/index'
+import UsersPage from './components/usersPage'
+import EditUser from './components/editingUser'
+import Spinner from './components/Spinner'
 import './Chat.css';
 
 class Chat extends React.Component{
@@ -18,13 +21,17 @@ class Chat extends React.Component{
     return (
       !this.state.isLoading ? 
         <div>
-          <Header />
-          <ModalPage />
-          <MessageList />
-          <MessageInput /> 
+          <Switch>
+            <Route exact path='/users' component={UsersPage}/>
+            <Route exact path='/user' component={EditUser}/>
+            <Route exact path='/chat' component={ChatPage}/>
+            <Route exact path='/chat/edit' component={EditMessage}/>
+            <Route path='/user/:id' component={EditUser}/>
+            <Route path='/' component={Login}/>
+          </Switch>
         </div>
         :
-        <div id="loading"></div>
+       <Spinner />
     )
   }
 }
